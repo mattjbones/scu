@@ -181,6 +181,3 @@ main () {
 }
 
 main
-#SSH_CONFIG_FILE_LOCATION="/Users/mbarnettjones/.ssh/config"
-#remove_host_by_name "tveDev"
-
