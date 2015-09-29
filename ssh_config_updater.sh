@@ -10,7 +10,7 @@ check_file_location () {
 config_file_location_check () {
     
     check_file_location $1
-    check_file_ok=$?
+    local check_file_ok=$?
 
     if [ "$check_file_ok" -eq "1" ]; then
         echo "default config file found"
@@ -19,7 +19,7 @@ config_file_location_check () {
         read sNewConfigLocation
         if [[ $sNewConfigLocation == "~"* ]]; then
             echo "expanding ~"
-            eval sNewConfigLocation=$sNewConfigLocation
+            sNewConfigLocation=${sNewConfigLocation/#\~/$HOME}
         fi 
         config_file_location_check $sNewConfigLocation
     fi
@@ -27,7 +27,7 @@ config_file_location_check () {
 }
 
 main () {
-    local sConfigLocation="$HOME/.ssh/confg"
+    local sConfigLocation="$HOME/.ssh/config"
     
     config_file_location_check $sConfigLocation
 
