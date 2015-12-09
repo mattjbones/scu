@@ -10,6 +10,11 @@ Usage is probably best by alias, pull the code and alias to script. e.g from my 
   
 Then invocation is simply `$ scu`
 
+## Usage
+By default the script will run in interactive mode, however this is not always useful and there is the options for some command line args.
+
+`-l` will list all entries in the config file
+
 ## Requirements
 This script has been written for bash and developed and tested on OS X. I will test it on more platforms if it becomes more useful but I use `sed` to process the removal which might not translate. You'll have to try for yourself. 
 
