@@ -176,8 +176,21 @@ main () {
     local sConfigLocation="$HOME/.ssh/config"
     
     config_file_location_check $sConfigLocation
-
-    check_action
 }
+list=0
+while getopts "l" flag
+do
+    case $l in
+        l)  list=1
+            ;;
+    esac
+done
 
 main
+
+if [ $list == 1 ]; then
+    list_entries
+else
+    list_entries
+fi
+#main
