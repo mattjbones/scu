@@ -1,5 +1,5 @@
 # Simple SSH Config Updater 
-So it's a little bash script I wrote to help quickly update SSH config files. I found that I was frequently vim'ing and grepping my config for servers I didn't use very often. This script is an attempt to speed up those interactions.
+So it's a little bash script I wrote to help quickly update SSH config files. I found that I was frequently vim'ing and grepping my config for the names of servers I didn't use very often. This script is an attempt to speed up those interactions.
 
 I added the removal ability because I wanted to have a play with sed and see what could be done. 
 
